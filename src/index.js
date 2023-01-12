@@ -1,3 +1,6 @@
+// toaster imports: 
+import { Toaster } from "react-hot-toast";
+
 // react imports
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -6,12 +9,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 // livepeer imports
-import {
-  LivepeerConfig,
-  createReactClient,
-  studioProvider,
-} from '@livepeer/react';
+import { LivepeerConfig } from '@livepeer/react';
 import LivePeerClient from './Livepeer';
+
+// apollo imports
+import { ApolloProvider, ApolloClient, InMemoryCache, HttpLink, createHttpLink} from "@apollo/client"
 
 // rainbowkit imports
 import {
@@ -24,13 +26,6 @@ import { mainnet, polygon, polygonMumbai } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import '@rainbow-me/rainbowkit/styles.css';
-
-// Livepeer Config:
-// const livepeerClient = createReactClient({
-//   provider: studioProvider({
-//     apiKey: process.env.NEXT_PUBLIC_STUDIO_API_KEY,
-//   }),
-// });
 
 // Rainbowkit Config:
 const { chains, provider } = configureChains(
@@ -52,21 +47,33 @@ const wagmiClient = createClient({
   provider
 })
 
+// Apollo client: 
+const client = new ApolloClient({
+  uri: "https://api.thegraph.com/subgraphs/name/niemacodes/constellation",
+  cache: new InMemoryCache(),
+  fetchOptions: {
+    mode: 'no-cors',
+  },
+  });
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains} theme={lightTheme({
-            accentColor: 'white',
-            borderRadius: 'small',
-            fontStack: 'system',
-            overlayBlur: 'small',
-          })}>
-        <LivepeerConfig client={LivePeerClient}>
-          <App/> 
-        </LivepeerConfig>
-      </RainbowKitProvider>
-    </WagmiConfig>
+    <ApolloProvider client={client}>
+      <WagmiConfig client={wagmiClient}>
+        <RainbowKitProvider chains={chains} theme={lightTheme({
+              accentColor: 'white',
+              borderRadius: 'small',
+              fontStack: 'system',
+              overlayBlur: 'small',
+            })}>
+            <LivepeerConfig client={LivePeerClient}>
+              <Toaster /> 
+              <App/> 
+            </LivepeerConfig>
+        </RainbowKitProvider>
+      </WagmiConfig>
+    </ApolloProvider>
   </React.StrictMode>
 );
 

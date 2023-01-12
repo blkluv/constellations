@@ -2,9 +2,32 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 // react
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Landing() {
+
+      let navigate = useNavigate();
+
+    const connectWallet = async () => {
+        try {
+          const { ethereum } = window;
+    
+          if (!ethereum) {
+            alert("Get MetaMask!");
+            return;
+          }
+    
+          const accounts = await ethereum.request({
+            method: "eth_requestAccounts",
+          });
+          console.log("Connected", accounts[0]);
+          localStorage.setItem("walletAddress", accounts[0]);
+          navigate("/home");
+        } catch (error) {
+          console.log(error);
+        }
+    }
 
     return (
         <>
@@ -30,13 +53,14 @@ export default function Landing() {
                     >
                     It is a dapp built on top of Polygon network, allowing users
                     to create, share, & monetize their content with out worrying about
-                    data ownership & privacy. 
+                    data ownership & privacy. What you're able to do now is upload a video that
+                    will be minted to IPFS & stored on Web 3.0 Storage.
                     </p>
                     <div className='flex row justify-center'>
-                        <ConnectButton className="p-4 shadow-lg"></ConnectButton>
+                        <ConnectButton onClick={connectWallet} className="p-4 shadow-lg"></ConnectButton>
                     </div>
-                    <button className="mt-10 bg-white rounded text-black border-black p-4 shadow-lg">
-                        <a href="/upload" className="">Upload A Video</a>
+                    <button onClick={connectWallet} className="mt-10 bg-white rounded text-black border-black p-4 shadow-lg">
+                        <a href="/home" className="">Enter</a>
                     </button>
                 </div>
                 </div>
