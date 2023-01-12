@@ -5,6 +5,9 @@ import './App.css';
 import Landing from './pages/Landing'
 import Upload from './pages/Upload';
 import Home from './pages/Home'
+import Explore from './pages/Explore';
+import Chat from './pages/Chat';
+import Profile from './pages/Profile';
 import VideoContainer from './components/VideoComponent'
 
 // react
@@ -29,6 +32,16 @@ function App() {
         
         {/* Upload */}
         <Route path="/upload" exact element={<Upload/>} />
+
+        {/* Explore */}
+        <Route path="/explore" exact element={<Explore/>} />
+
+        {/* Chat */}
+        <Route path="/chat" exact element={<Chat/>} />
+
+        {/* Profile */}
+        <Route path="/profile" exact element={<Profile/>} />
+
 
       </Routes>
     </BrowserRouter>
