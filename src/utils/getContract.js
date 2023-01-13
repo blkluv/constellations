@@ -1,4 +1,4 @@
-import ContractAbi from "../artifacts/contracts/Constellations.sol/Constellations.json";
+import ContractAbi from "../utils/Constellations.json";
 import { ethers } from "ethers";
 
 export default function getContract() {
