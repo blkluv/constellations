@@ -49,13 +49,13 @@ export default function Home() {
 
   return (
       <div className="h-screen bg-white">
-        <div class="px-10 flex flex-col w-full h-screen items-center justify-center mx-auto">
+        <div className="px-10 flex flex-col w-full h-screen items-center justify-center mx-auto">
           {/* Navbar */}
           <Navbar/>
 
           {/* Sidebar & Videos */}
-          <div class="py-8 flex h-4/5 w-full rounded-md">
-            <div class="flex space-x-5 w-full h-full items-center justify-center mx-auto">
+          <div className="py-8 flex h-4/5 w-full rounded-md">
+            <div className="flex space-x-5 w-full h-full items-center justify-center mx-auto">
               
               {/* Sidebar */}
               <Sidebar/>

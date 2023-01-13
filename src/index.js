@@ -59,21 +59,25 @@ const client = new ApolloClient({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
-      <WagmiConfig client={wagmiClient}>
-        <RainbowKitProvider chains={chains} theme={darkTheme({
-              accentColor: 'blue',
-              borderRadius: 'small',
-              fontStack: 'system',
-              overlayBlur: 'small',
-            })}>
-            <LivepeerConfig client={LivePeerClient}>
-              <Toaster /> 
-              <App/> 
-            </LivepeerConfig>
-        </RainbowKitProvider>
-      </WagmiConfig>
-    </ApolloProvider>
+    {/* <WalletContextProvider>
+      <XmtpContextProvider> */}
+        <ApolloProvider client={client}>
+          <WagmiConfig client={wagmiClient}>
+            <RainbowKitProvider chains={chains} theme={darkTheme({
+                  accentColor: 'blue',
+                  borderRadius: 'small',
+                  fontStack: 'system',
+                  overlayBlur: 'small',
+                })}>
+                <LivepeerConfig client={LivePeerClient}>
+                  <Toaster /> 
+                  <App/> 
+                </LivepeerConfig>
+            </RainbowKitProvider>
+          </WagmiConfig>
+        </ApolloProvider>
+      {/* </XmtpContextProvider>
+    </WalletContextProvider> */}
   </React.StrictMode>
 );
 

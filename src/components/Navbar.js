@@ -18,16 +18,12 @@ export default function Navbar() {
           
             <a href="#_" className="text-black font-bold flex text-xl items-center">
                 <img alt="logo" src={logo} className="w-12 h-auto text-black mr-3 border-5 shadow-lg border-black rounded-lg"></img>
-                <span class="text-white">constellations</span>
+                <span className="text-white">constellations</span>
             </a>
         </div>
         <div className=" items-center text-m font-medium text-white mr-4">
             <ConnectButton className=""></ConnectButton>
-            {/* <button 
-              href="#_" 
-              className="shadow-xl rounded rounded-md bg-black px-4 py-3 text-white">
-              connect lens
-            </button> */}
+  
         </div>
       </div>
     </div>

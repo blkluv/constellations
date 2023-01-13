@@ -32,34 +32,12 @@ export default function Landing() {
     })
     
     const connectWallet = async () => {
-        // try {
-        //     const accounts = await window.ethereum.send(
-        //       "eth_requestAccounts"
-        //     )
+        
             setConnected(true)
-            // const account = accounts.result[0]
             const account = signer.getAddress();
             console.log(account);
             setUserAddress(account)
-            // const urqlClient = await createClient()
-            // const response = await urqlClient.query(getChallenge, {
-            //   address: account
-            // }).toPromise()
-            // // const provider = new providers.Web3Provider(window.ethereum);
-            // // const signer = provider.getSigner()
-            // // const signature = await signer.signMessage(response.data.challenge.text)
-            // // const authData = await urqlClient.mutation(authenticateMutation, {
-            // //   address: account, signature
-            // // }).toPromise()
-            // const { accessToken, refreshToken } = authData.data.authenticate
-            // const accessTokenData = parseJwt(accessToken)
-            // getUserProfile(account)
-            // localStorage.setItem(STORAGE_KEY, JSON.stringify({
-            //   accessToken, refreshToken, exp: accessTokenData.exp
-            // }))
-        //   } catch (err) {
-        //     console.log('error: ', err)
-        // }
+       
     }
 
     async function getUserProfile(address) {

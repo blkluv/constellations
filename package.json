@@ -13,6 +13,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@ukstv/jazzicon-react": "^1.0.0",
+    "@xmtp/xmtp-js": "^7.7.3",
     "apollo-link-rest": "^0.9.0",
     "axios": "^1.2.1",
     "buffer": "^6.0.3",
@@ -37,7 +38,8 @@
     "urql": "^3.0.3",
     "vercel": "^28.11.1",
     "wagmi": "^0.9.6",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "web3modal": "^1.9.11"
   },
   "scripts": {
     "start": "react-scripts start",
