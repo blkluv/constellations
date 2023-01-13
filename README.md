@@ -22,13 +22,12 @@ In the future I'd like to enable creators to generate subscription memberships, 
 ### IPFS
 
 # Resources:
-Link to wireframe/prototype: [https://bit.ly/3W9fORc](https://bit.ly/3W9fORc)
 
-Link to pitch deck:[https://bit.ly/3kdcebs](https://bit.ly/3kdcebs)
+Pitch deck:[https://bit.ly/3kdcebs](https://bit.ly/3kdcebs)
 
-Link to video submission: [https://bit.ly/3WggiVO](https://bit.ly/3WggiVO) 
+Video submission: [https://bit.ly/3WggiVO](https://bit.ly/3WggiVO) 
 
-Link to website demo: [https://bit.ly/3ZAJt8T](https://bit.ly/3ZAJt8T)
+Website demo: [https://bit.ly/3ZAJt8T](https://bit.ly/3ZAJt8T)
 
 Figma Wireframe: [https://bit.ly/3W9fORc](https://bit.ly/3W9fORc)
 
