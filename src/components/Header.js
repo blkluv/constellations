@@ -13,10 +13,10 @@ const Header = () => {
   const [providerState] = useContext(XmtpContext);
 
   return (
-    <div className="flex align-center justify-between">
+    <div className="text-green-300 font-semibold flex align-center justify-between">
       {walletAddress ? (
         <div className="flex align-center">
-          <h3 className="text-lg font-semibold mb-3">{shortAddress(walletAddress)}</h3>
+          <h3 className="text-lg font-semibold mb-3 mr-5">{shortAddress(walletAddress)}</h3>
           {!providerState.client && (
             <button
               className="border-2 border-black bg-black shadow-lg px-3 py-2"
