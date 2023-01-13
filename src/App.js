@@ -9,6 +9,7 @@ import Explore from './pages/Explore';
 import Chat from './pages/Chat';
 import Profile from './pages/Profile';
 import VideoContainer from './components/VideoComponent'
+import ExploreProfile from './pages/ExploreProfile';
 
 // react
 import React, {useState, useEffect} from "react";
@@ -36,6 +37,9 @@ function App() {
         {/* Explore */}
         <Route path="/explore" exact element={<Explore/>} />
 
+        {/* Explore Profile */}
+        <Route path="/explore/:id" exact element={<ExploreProfile/>} />
+        
         {/* Chat */}
         <Route path="/chat" exact element={<Chat/>} />
 

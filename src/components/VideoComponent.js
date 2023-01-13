@@ -1,6 +1,6 @@
 // react:
 import React, {useState, useEffect} from "react";
-import { useHistory, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 // components
 import VideoPlayer from "./VideoPlayer";

@@ -13,11 +13,11 @@ import { LivepeerConfig } from '@livepeer/react';
 import LivePeerClient from './Livepeer';
 
 // apollo imports
-import { ApolloProvider, ApolloClient, InMemoryCache, HttpLink, createHttpLink} from "@apollo/client"
+import { ApolloProvider, ApolloClient, InMemoryCache} from "@apollo/client"
 
 // rainbowkit imports
 import {
-  lightTheme,
+  darkTheme,
   getDefaultWallets,
   RainbowKitProvider,
 } from '@rainbow-me/rainbowkit';
@@ -61,8 +61,8 @@ root.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
       <WagmiConfig client={wagmiClient}>
-        <RainbowKitProvider chains={chains} theme={lightTheme({
-              accentColor: 'white',
+        <RainbowKitProvider chains={chains} theme={darkTheme({
+              accentColor: 'blue',
               borderRadius: 'small',
               fontStack: 'system',
               overlayBlur: 'small',
