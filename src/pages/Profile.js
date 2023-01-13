@@ -27,8 +27,8 @@ export default function Profile() {
                         <Sidebar/>
                         
                         {/* Video section */}
-                        <div className="flex-row h-full w-5/6 rounded-md">
-                            <p>Profile PAGE</p>
+                        <div className="flex-row h-full text-4xl w-5/6 rounded-md">
+                            <p>Profile Page - Coming Soon!!!!! Stay Tuned ^-^</p>
                         </div>
                     </div>
                 </div>
