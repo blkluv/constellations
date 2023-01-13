@@ -1,10 +1,10 @@
 # Constellations
-## Constellations is an app for creators to create community in order to distribute & monetize their content. 
+
+Constellations is an app for creators to create community in order to distribute & monetize their content. 
 
 This project is a platform built on Lens where creators can have their communities & convert from short form content fans (think TikTok) to long form content fans (think Youtube) to paid community members (think Patreon) all in one place.
 
 We use NFTs to create memberships for fans to purchase and allow creators to monetize with other NFT assets like collectibles, content as NFTs, fractional revenue share, etc.
-
 
 # Tools Used: 
 ## LivePeer
@@ -16,6 +16,7 @@ We use NFTs to create memberships for fans to purchase and allow creators to mon
 ## The Graph
 
 ## XMTP Protocol
+
 
 # To Run: 
 
